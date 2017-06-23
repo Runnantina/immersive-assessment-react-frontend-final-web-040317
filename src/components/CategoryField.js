@@ -1,7 +1,7 @@
 import React from 'react'
 
 const CategoryField = (props) => {
-  const { category, checked }  = props
+
 
   return (
     <div className=" four wide field">
@@ -10,9 +10,11 @@ const CategoryField = (props) => {
         <input
           type="radio"
           name="category"
-          checked={ checked }
+          value={props.category}
+          checked={ props.checked }
+          onChange={ props.handleChange }
         />
-        <label>{ category }</label>
+        <label>{ props.category }</label>
 
       </div>
     </div>

@@ -7,13 +7,14 @@ const CategorySelector = (props) => {
   const categoryFields = categories.map(
     (category, i) => {
 
-      const checked = category === props.activeCategory
+      const checked = (category === props.activeCategory) // true of false
 
       return (
         <CategoryField
           key={ i }
-          checked={ checked }
+          checked={ checked } // true or false
           category={ category }
+          handleChange={props.handleChange}
         />
       )
     }
